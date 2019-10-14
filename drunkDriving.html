@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>警情总览</title>
+    <link rel="stylesheet" href="lulu/ui.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="jedata/skin/jedate.css" />
+    <link rel="stylesheet" href="style/drunkDriving.css" />
+	</head>
+
+	<body>
+		<div class="police-situation pad1">
+            <div class="top-search">
+                <select class="minW15">
+                    <option value="0" selected>全部大队</option>
+                    <option value="1">选项2</option>
+                    <option value="2">选项3</option>
+                    <option value="3">选项4</option>
+                    <option value="4">选项5</option>
+                    <option value="5">选项6</option>
+                </select>
+                <span class="ui-input ui-date-range-input dateicon"><input id="date-range" readonly type="text"></span>
+                <button class="ui-btn search-btn">查询</button>
+            </div>
+
+            <!-- 顶部第一部分内容 -->
+            <div class="content-top">
+                <div class="ui-card cqsj">
+                    <div class="ui-card-title">
+                        <p class="ch">吹气数据</p>
+                        <p class="en">Warning list</p>
+                    </div>
+                    <div class="ui-card-content cqsj-content">
+                        <div class="cqsj-echart">
+                            <div class="echarts-box" id="cqsj"></div>
+                        </div>
+                        <div class="cqsj-legend">
+                            <div class="cqsj-legend-list">
+                                <i class="cqsj-legend-icon"></i>
+                                <span class="cqsj-legend-name">正常</span>
+                                <div class="cqsj-legend-val">
+                                    <span>12234</span>
+                                    <span>起</span>
+                                </div>
+                            </div>
+                            <div class="cqsj-legend-list">
+                                <i class="cqsj-legend-icon"></i>
+                                <span class="cqsj-legend-name">醉酒驾驶</span>
+                                <div class="cqsj-legend-val">
+                                    <span>234</span>
+                                    <span>起</span>
+                                </div>
+                            </div>
+                            <div class="cqsj-legend-list">
+                                <i class="cqsj-legend-icon"></i>
+                                <span class="cqsj-legend-name">饮酒驾驶</span>
+                                <div class="cqsj-legend-val">
+                                    <span>12234</span>
+                                    <span>起</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-card cqycsj">
+                    <div class="ui-card-title tcenter">
+                        <p class="ch">异常吹气数据</p>
+                        <p class="en">Abnormal blowing data</p>
+                    </div>
+                    <div class="ui-card-content cqycsj-content">
+                        <div class="lists">
+                            <img src="./imgs/jdcl.png" alt="">
+                            <div class="list">
+                                <div>
+                                    <span class="num">19047</span>辆
+                                </div>
+                                <div>降档车辆</div>
+                            </div>
+                        </div>
+                        <div class="lists">
+                            <img src="./imgs/ycdz.png" alt="">
+                            <div class="list">
+                                <div>
+                                    <span class="num">19032</span>辆
+                                </div>
+                                <div>一车多证</div>
+                            </div>
+                        </div>
+                        <div class="lists">
+                            <img src="./imgs/yzwp.png" alt="">
+                            <div class="list">
+                                <div>
+                                    <span class="num">19032</span>辆
+                                </div>
+                                <div>有证无牌</div>
+                            </div>
+                        </div>
+                        <div class="lists">
+                            <img src="./imgs/ypwz.png" alt="">
+                            <div class="list">
+                                <div>
+                                    <span class="num">19032</span>辆
+                                </div>
+                                <div>有牌无证</div>
+                            </div>
+                        </div>
+                        <div class="lists">
+                            <img src="./imgs/wpwz.png" alt="">
+                            <div class="list">
+                                <div>
+                                    <span class="num">19032</span>辆
+                                </div>
+                                <div>无牌无证</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中间内容 -->
+            <div class="content-middle">
+                <div class="ui-card lhysj">
+                    <div class="ui-card-title">
+                        <p class="ch">六合一数据</p>
+                        <p class="en">Alarm list</p>
+                    </div>
+                    <div class="ui-card-content lhysj-content">
+                        <div>
+                            <div class="echarts-box" id="lhysj1"></div>
+                            <div class="lhysj-legend legend1">
+                                <div>
+                                    <i></i>
+                                    <span>醉酒驾驶</span>
+                                    <span>123起</span>
+                                </div>
+                                <div>
+                                    <i></i>
+                                    <span>饮酒驾驶</span>
+                                    <span>123起</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="line"></i>
+                            <div class="echarts-box" id="lhysj2"></div>
+                            <div class="lhysj-legend legend2">
+                                <div>
+                                    <i></i>
+                                    <span>已裁决</span>
+                                    <span>123起</span>
+                                </div>
+                                <div>
+                                    <i></i>
+                                    <span>未裁决</span>
+                                    <span>123起</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-card lhyycsj">
+                    <div class="ui-card-title">
+                        <p class="ch">六合一异常数据</p>
+                        <p class="en">Abnormal list</p>
+                    </div>
+                    <div class="ui-card-content lhyycsj-content">
+                        <img src="./imgs/ycdz.png" alt="">
+                        <div class="list">
+                            <div>
+                                <span class="num">19032</span>辆
+                            </div>
+                            <div>重复开单数量</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 底部内容 -->
+            <div class="content-bottom">
+                <div class="ui-card rhsjfx">
+                    <div class="ui-card-title">
+                        <p class="ch">融合数据分析</p>
+                        <p class="en">Fusion data analysis</p>
+                    </div>
+                    <div class="ui-card-content rhsjfx-content">
+                        <div class="matched">
+                            <div class="top-title">
+                                <div class="num">19028</div>
+                                <div>已匹配</div>
+                            </div>
+                            <div class="echarts-box" id="rhsjfx1"></div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="unmatched">
+                            <div class="top-title">
+                                <div class="num">19028</div>
+                                <div>未匹配</div>
+                            </div>
+                            <div class="echarts-box" id="rhsjfx2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-card ssjjsj">
+                    <div class="ui-card-title">
+                        <p class="ch">实时酒驾数据</p>
+                        <p class="en">Fusion data analysis</p>
+                    </div>
+                    <div class="ui-card-content ssjjsj-content">
+                        <div class="ui-table-title">
+                            <span>时间</span>
+                            <span>地点</span>
+                            <span>事件</span>
+                        </div>
+                        <div class="ui-table-body">
+                            <div class="table">
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                                <div class="tr">
+                                    <span class="td">2018/12/12/ 13:00:00</span>
+                                    <span class="td">滨河路与西兴路交叉口</span>
+                                    <span class="td">查处饮酒驾驶事件 测得含量为20ml/100ml</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="./js/common/jquery.min.js"></script>
+    <script src="./js/common/echarts.min.js"></script>
+    <script src="./js/common/Echarts_base.js"></script>
+    <script src="./js/common/resize.js"></script>
+    <script src="./js/custom/option.js"></script>
+    <script src="./lulu/all.js"></script>
+    <script src="./jedata/src/jedate.js"></script>
+    <script src="./js/common/deepclone.js"></script>
+    <script src="./js/custom/util.js"></script>
+    <script src="./js/common/customTable.js"></script>
+    <script src="./js/custom/drunkDriving.js"></script>
+	</body>
+</html>
+a

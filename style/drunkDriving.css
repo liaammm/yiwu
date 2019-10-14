@@ -1,0 +1,357 @@
+.police-situation {
+	height: 100%;
+	width: calc(100% + .4rem);  /* .4rem宽度的滚动条 */
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: #ffffff;
+}
+
+.minW15 {
+	min-width: 15rem;
+}
+
+.top-search {
+	padding: 1rem 0;
+	border-bottom: 1px solid #239fef;
+}
+
+.top-search > *:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.search-btn {
+	width: 10rem;
+	height: 2.67rem;
+}
+
+.content-top {
+	margin-top: 1rem;
+	height: 18rem;
+	display: flex;
+}
+
+.content-top .cqsj {
+	width: 36.83rem;
+	margin-right: 1rem;
+	background-image: linear-gradient(116deg, #16305c 0%, #1d3e71 100%);
+}
+
+.content-top .cqycsj {
+	flex: 1;
+	background-image: linear-gradient(96deg, #506fcd 0%, #449fe2 100%);
+}
+
+
+/* 吹气数据 */
+.cqsj-content {
+	display: flex
+}
+
+.cqsj-echart {
+	width: 40%;
+	height: 100%;
+}
+
+.cqsj-legend {
+	width: calc(60% - 2rem);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-left: 2rem;
+}
+
+.cqsj-legend-list {
+	display: flex;
+	align-items: center;
+}
+
+.cqsj-legend-icon {
+	display: inline-block;
+	width: .68rem;
+	height: .68rem;
+	border-radius: 50%;
+	background: #3db4ee;
+	margin-right: 1rem;
+}
+
+.cqsj-legend-name {
+	min-width: 4rem;
+	width: 9rem;
+}
+
+.cqsj-legend-val {
+	color: #55d8fe;
+	flex: 1;
+}
+
+.cqsj-legend-val > span:first-child {
+	font-size: 1.2rem;
+}
+
+/* 异常吹气数据 */
+.cqycsj-content {
+	display: flex;
+}
+
+.cqycsj-content .lists {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.cqycsj-content .lists:not(:first-child)::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	height: 3rem;
+	width: 2px;
+	background: #ffffff;
+	left: 0;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.cqycsj-content .lists img {
+	width: 2.34rem;
+	margin: 0 2rem 0 2.5rem;
+}
+
+.cqycsj-content .lists:last-child img {
+	width: 1.8rem;
+}
+
+.cqycsj-content .lists .num {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	font-family: "D IN";
+	font-weight: 800;
+	text-align: center;
+}
+
+.cqycsj-content .lists .list > div {
+	margin: .4rem 0;
+}
+
+
+.content-middle {
+	margin-top: 1rem;
+	height: 18.67rem;
+	display: flex;
+	box-shadow: 0px 4px 7px rgba(0,0,0,0.3);
+	background-image: linear-gradient(116deg, #16305c 0%, #1d3e71 100%);
+}
+
+/* 六合一数据 */
+.content-middle .lhysj {
+	/* width: 66.34rem; */
+	flex: 1;
+	background: transparent;
+	border: none;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+}
+
+/* 六合一数据 */
+.lhysj-content {
+	display: flex;
+}
+
+.lhysj-content > div {
+	flex: 1;
+	height: 100%;
+}
+
+.lhysj-content .line {
+	display: inline-block;
+	height: 3.5rem;
+	border-left: 2px solid #8b99af;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.lhysj-content .echarts-box {
+	height: calc(100% - 2rem);
+}
+
+.lhysj-content .lhysj-legend {
+	display: flex;
+	justify-content: space-around;
+	line-height: 2rem;
+}
+
+.lhysj-content .lhysj-legend i {
+	display: inline-block;
+	width: .68rem;
+	height: .68rem;
+	border-radius: 50%;
+	background: #ff8373;
+	margin-right: .4rem;
+}
+
+.lhysj-content .lhysj-legend span:last-child {
+	padding-left: 1rem;
+}
+
+
+/* 六合一异常数据 */
+.content-middle .lhyycsj {
+	/* flex: 1; */
+	width: 43.6%;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+	display: flex;
+	margin: 1rem;
+	height: calc(100% - 2rem);
+	background: #244c8e;
+	border: none;
+}
+
+.content-middle .lhyycsj .ui-card-title {
+	width: 26rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.lhyycsj-content {
+	display: flex;
+	align-items: center;
+	margin-left: 4.3rem;
+}
+
+.lhyycsj-content img {
+	width: 4.1667rem;
+	margin-right: 2.83rem;
+}
+
+.lhyycsj-content .list > div {
+	margin: .5rem 0;
+}
+
+.lhyycsj-content .list > div:nth-child(2) {
+	padding-left: 1rem;
+}
+
+.lhyycsj-content .list .num {
+	font-size: 3rem;
+	letter-spacing: 1px;
+	font-family: "D IN";
+	font-weight: 800;
+	text-align: center;
+}
+
+
+/* 底部 */
+.content-bottom {
+	margin-top: 1rem;
+	height: 31.34rem;
+	display: flex;
+}
+
+.content-bottom .rhsjfx {
+	/* width: 64.77rem; */
+	flex: 1;
+	margin-right: 1rem;
+	background-image: linear-gradient(116deg, #16305c 0%, #1d3e71 100%);
+}
+
+.content-bottom .ssjjsj {
+	/* flex: 1; */
+	width: calc(43.6% + 1rem);
+	background-image: linear-gradient(116deg, #16305c 0%, #1d3e71 100%);
+}
+
+/* 融合数据分析 */
+.rhsjfx-content {
+	display: flex;
+}
+
+.rhsjfx-content .matched,
+.rhsjfx-content .unmatched {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.rhsjfx-content .line {
+	height: 15rem;
+	border-left: 2px solid #214272;
+	margin: 0 2rem;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.rhsjfx-content .top-title {
+	height: 3.5rem;
+	display: inline-block;
+	padding: 0 2rem;
+	position: relative;
+}
+
+.rhsjfx-content .top-title::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	border-width: 1rem;
+	border-style: solid;
+	border-color: transparent #5071ce transparent  transparent;
+	left: -1rem;
+	bottom: -1rem;
+    transform: rotate(-45deg);
+}
+
+.rhsjfx-content .top-title::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	border-width: 1rem;
+	border-style: solid;
+	border-color: transparent transparent  transparent #5071ce;
+	right: -1rem;
+	top: -1rem;
+    transform: rotate(-45deg);
+}
+
+.rhsjfx-content .top-title .num {
+	font-size: 1.5rem;
+	letter-spacing: 1px;
+	line-height: 1.5rem;
+	font-weight: bold;
+	margin-bottom: .2rem;
+}
+
+.rhsjfx-content .echarts-box {
+	height: calc(100% - 3.5rem);
+}
+
+
+/* 实时酒驾数据 */
+.ssjjsj-content .ui-table-title {
+	background: #365380;
+	line-height: 2.6rem;
+}
+
+.ssjjsj-content .ui-table-body .tr:nth-child(even) {
+	background: transparent;
+}
+
+.ssjjsj-content .ui-table-body .tr:nth-child(odd) {
+	background: #264f8f;
+}
+
+.ssjjsj-content .ui-table-title span,
+.ssjjsj-content .ui-table-body .tr .td {
+	padding-left: .5rem;
+	padding-right: .5rem; 
+}
+
+.ssjjsj-content .ui-table-title span:nth-child(1),
+.ssjjsj-content .ui-table-body .tr .td:nth-child(1) {
+	width: 12rem;
+}

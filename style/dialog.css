@@ -1,0 +1,262 @@
+/* 警务研判-区域展开分析 */
+.redional-Ana-dialog {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.redional-Ana-dialog .top-title {
+	position: relative;
+	width: 100%;
+	color: #fefefe;
+}
+
+.redional-Ana-dialog .top-title .area-name {
+	color: #05e2fb;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.32rem;
+	margin-right: 1.5rem;
+}
+
+.redional-Ana-dialog .checkbox-con {
+	margin-top: 1rem;
+}
+
+.redional-Ana-dialog .checkbox-con > * {
+	margin-bottom: 1rem;
+}
+
+.redional-Ana-dialog .checkbox-list {
+	color: #41adf3;
+	background: #21407a;
+	padding: .5rem .4rem;
+	min-height: 2.352rem;
+}
+
+.redional-Ana-dialog .checkbox-list > div {
+	display: none;
+}
+
+.redional-Ana-dialog .checkbox-list > div.active {
+	display: block;
+}
+
+.redional-Ana-dialog .checkbox-more {
+	display: none;
+}
+
+.redional-Ana-dialog .content-jqfsqs {
+	width: 100%;
+	height: 34%;
+	margin-bottom: 1rem;
+}
+
+.redional-Ana-dialog .content-jqxqlb {
+	flex: 1;
+}
+
+.redional-Ana-dialog .content-jqxqlb .ui-table-title span:first-child {
+	padding-left: 1.5rem
+}
+.redional-Ana-dialog .content-jqxqlb .ui-table-body tr td:nth-child(1) {
+	padding-left: 1.9rem;
+}
+
+.redional-Ana-dialog .content-jqxqlb .w5,
+.redional-Ana-dialog .content-jqxqlb .ui-table-body tr td:last-child {
+	width: 5rem;
+}
+
+.redional-Ana-dialog .content-jqxqlb .ui-table-body tr td:last-child {
+	color: #41adf3;
+	cursor: pointer;
+}
+
+/* 警务研判点击详情弹框 */
+.police-detal-dialog {
+	width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    margin: 1rem;
+    background: rgba(11, 40, 79, 0.69);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.police-detal-dialog .top-title {
+	position: relative;
+}
+
+.police-detal-dialog .title-name {
+	width: 10rem;
+	height: 2.2rem;
+	line-height: 2.2rem;
+	border-radius: 0;
+	position: relative;
+    left: -1.32rem;
+    top: -.6rem;
+}
+
+.police-detal-dialog .box1, 
+.police-detal-dialog .box2, 
+.police-detal-dialog .box3 {
+	padding: 1.5rem 1rem;
+	line-height: 2rem;
+}
+
+.police-detal-dialog .box1 {
+	padding-top: 1rem;
+}
+
+.police-detal-dialog .box4 {
+	flex: 1;
+}
+
+.police-detal-dialog .box1, 
+.police-detal-dialog .box2 {
+	border-bottom: 1px dashed #3a4e85;
+}
+
+.police-detal-dialog .box ul {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.police-detal-dialog .box ul li {
+	width: 25%;
+	display: flex;
+}
+
+.police-detal-dialog .box ul li > span {
+	display: inline-block;
+}
+
+.police-detal-dialog .box ul li > span:first-child {
+	display: inline-block;
+	width: 7rem;
+}
+
+.police-detal-dialog .box ul li > span:last-child {
+	flex: 1;
+	padding-right: 1rem;
+}
+
+
+/* 异常数据分析-融合异常数据 */
+.redional-Ana-dialog.fusion .top-title {
+	display: flex;
+	border-bottom: 2px solid #194874;
+	margin-bottom: 3rem;
+}
+
+.redional-Ana-dialog.fusion .return-btn {
+	width: 2.48rem;
+	height: 2.48rem;
+	cursor: pointer;
+	background: url(../imgs/return.png) no-repeat left 2px;
+	background-size: 1.06rem;
+}
+
+.redional-Ana-dialog.fusion .fusion-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .top-search{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .top-search .left {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .top-search .left > * {
+	margin-right: 1rem;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .bottom-main {
+	flex: 1;
+	position: relative;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .bottom-main .table-box {
+	height: calc(100% - 7.2rem);
+	border-bottom: 1px solid #194874;
+	position: absolute;
+    width: 100%;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .bottom-main .related-box {
+	height: 7.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.redional-Ana-dialog.fusion .fusion-content .bottom-main .related-box > * {
+	margin: 0 1rem;
+}
+
+/* 历史数据查询 */
+.redional-Ana-dialog.history .top-title {
+	display: flex;
+	/* border-bottom: 2px solid #194874; */
+    margin-bottom: 1.5rem;
+}
+.redional-Ana-dialog.history .return-btn {
+	width: 2.6rem;
+	height: 2.48rem;
+	background: url(../imgs/his_return.png) no-repeat left top;
+	cursor: pointer;
+	background-size: 1.6rem;
+	position: relative;
+	top: -.22rem;
+}
+
+.redional-Ana-dialog.history .history-content {
+	width: 100%;
+	height: calc(100% - 2.48rem);
+}
+
+.redional-Ana-dialog.history .history-content .title{
+	color: #239fef;
+	font-size: 1.2rem;
+	margin-bottom: .6rem;
+}
+
+.redional-Ana-dialog.history .con-lists {
+	width: 100%;
+	height: calc(100% - 2.48rem);
+	overflow: auto;
+}
+
+.redional-Ana-dialog.history .con-lists .list {
+	width: calc(100% - .48rem);
+	border: 1px solid #195f8d;
+	margin-top: 1.6rem;
+	padding: 1.5rem 1.6rem;;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.redional-Ana-dialog.history .con-lists .list .item {
+	/* flex: 0 0 18%; */
+	padding-right: 3rem;
+	min-width: 12rem;
+	margin: 1.5rem 0;
+}
+
+.redional-Ana-dialog.history .con-lists .list .item .name {
+	margin-bottom: 1rem;
+}

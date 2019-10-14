@@ -1,0 +1,21 @@
+﻿.echarts_base .light{
+	cursor: pointer;
+	position: absolute;
+	left: -150%;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5),hsla(0,0%,100%,0));
+	transform: skewX(-25deg)
+}
+.echarts_base .light.active{
+	animation: animit-echarts_base .5s 1
+}
+@keyframes animit-echarts_base {
+	0% {
+		left: -150%
+	}
+	to {
+		left: 100%
+	}
+}

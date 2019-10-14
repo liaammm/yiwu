@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ch">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>时段分析</title>
+    <link rel="stylesheet" href="lulu/ui.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="jedata/skin/jedate.css" />
+    <link rel="stylesheet" href="style/blowAbnormalData.css" />
+    <link rel="stylesheet" href="style/dialog.css" />
+	</head>
+
+	<body>
+		<div class="searchTable pad1">
+            <div class="top-search">
+                <div>
+                    <span class="ui-input ui-date-range-input dateicon day-filter"><input readonly type="text" id="date-range"></span>
+                    <select class="minW15">
+                        <option value="0" selected>按区域</option>
+                        <option value="1">区域1</option>
+                        <option value="2">区域2</option>
+                    </select>
+                    <input class="ui-input" type="text" placeholder="请输入">
+                    <select class="minW15">
+                        <option value="0" selected>按警情类型</option>
+                        <option value="1">按警情类型1</option>
+                        <option value="2">按警情类型2</option>
+                    </select>
+                    <select class="minW15">
+                        <option value="0" selected>按环境因素类型</option>
+                        <option value="1">选项一</option>
+                        <option value="2">选项二</option>
+                    </select>
+                </div>
+                <div>
+                    <button class="ui-btn search-btn">查询</button>
+                </div>
+            </div>
+            
+            <!-- 警情列表 -->
+            <div class="content-table">
+                <div class="ui-card jqlb">
+                    <div class="ui-card-content" id="table-content"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 弹框 -->
+        <div class="dialog-content" id="dialog-one"></div>
+    
+    <script src="./js/common/jquery.min.js"></script>
+    <script src="./js/common/echarts.min.js"></script>
+    <script src="./js/common/Echarts_base.js"></script>
+    <script src="./js/custom/option.js"></script>
+    <script src="lulu/all.js"></script>
+    <script src="./jedata/src/jedate.js"></script>
+    <script src="./js/common/deepclone.js"></script>
+    <script src="./js/custom/util.js"></script>
+    <script src="./js/common/customTable.js"></script>
+    <script src="./js/custom/demo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,498 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+button,
+a {
+  border: none;
+  outline: none;
+}
+
+clearfix:before,
+clearfix:after {
+  content: '';
+  display: table;
+}
+
+clearfix:after {
+  clear: both;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #d8d8d8;
+  /* background-color: #19325c; */
+  background-image: linear-gradient(130deg, #163263 0%, #1e3351 100%);
+  position: relative;
+  font-family: 'Microsoft Yahei', 'Helvetica', Arial, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.borc {
+  border: 1px solid #195f8d;
+  border-radius: 4px;
+}
+
+/* 文字超出部分，...表示 */
+.ohide{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.borc:hover {
+  border-color: #188ad6;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.minW15 {
+  min-width: 15rem;
+}
+
+.minW10 {
+  min-width: 10rem;
+}
+
+.Width10 {
+  width: 10rem;
+}
+
+.mt1 {
+  margin-right: 1rem;
+}
+
+.mr1 {
+  margin-right: 1rem;
+}
+
+.mb1 {
+  margin-bottom: 1rem
+}
+
+.ml1 {
+  margin-right: 1rem;
+}
+
+.pad1 {
+  padding: 1rem;
+}
+
+.pt1 {
+  padding-top: 1rem;
+}
+
+.pr1 {
+  padding-right: 1rem;
+}
+
+.pb1 {
+  padding-bottom: 1rem;
+}
+
+.pl1 {
+  padding-left: 1rem;
+}
+
+.ptb1lr2 {
+  padding: 1rem 2rem;
+}
+
+span.ui-input.hide {
+  display: none;
+}
+
+.close-btn {
+  height: 2rem;
+  width: 2rem;
+  line-height: 2.5rem;
+	background: #239fef;
+	background: url(../imgs/close.svg) no-repeat center;
+	background-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.green-btn {
+  color: #fff;
+  cursor: pointer;
+  background:#3bb157;
+  padding:.2rem .8rem;
+  border-radius: 2px;
+}
+
+.cupHc {
+  cursor: pointer;
+}
+
+.cupHc:hover {
+  color: #00e5ff
+}
+
+.ui-card {
+  background: #1e396c;
+  border: 1px solid #2d447a;
+  border-radius: .2rem;
+  padding: 1rem;
+  height: 100%;
+  box-shadow: 0px 4px 7px rgba(0,0,0,0.3);
+}
+
+.dialog-content .ui-card {
+  background: rgba(11, 40, 79, 0.69);
+  border: 1px solid #142e54;
+}
+
+.ui-card-title {
+  color: #fefefe;
+  position: relative;
+  height: 2.48rem;
+  font-weight: bold;
+}
+
+.ui-card-title .ch {
+  font-size: 1rem;
+  line-height: 1.32rem;
+  padding-bottom: .32rem;
+  font-family: "Microsoft Ya Hei";
+
+}
+
+.ui-card-title .en {
+  font-size: .84rem;
+  line-height: .84rem;
+  font-family: "Arial";
+  letter-spacing: 1px;
+  color: #adb5ec;
+  font-family: "Arial";
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+/* 导出按钮 */
+.export-btn{
+	height: 2rem;
+    line-height: 2rem;
+    top: 0;
+    width: 5rem;
+    right: 0;
+	position: absolute;
+	display: flex;
+	cursor: pointer;
+}
+
+.export-icon{
+	background: url(../imgs/export.png) no-repeat;
+    background-size: cover;
+    width: 1.24rem;
+    height: 1.24rem;
+    margin-right: 0.7rem;
+    margin-top: 0.3rem;
+}
+
+.export-btn-text{
+	color:#858cbc;
+}
+
+.ui-card-content {
+  width: 100%;
+  height: calc(100% - 3.5rem);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.ui-card-content.wi2 {
+  width: calc(100% - 2rem);
+}
+
+.echarts-box {
+  height: 100%;
+  width: 100%;
+}
+
+.ui-btn {
+	text-align: center;
+	cursor: pointer;
+	border-radius: .2rem;
+	background: #5085d2;
+	color: #fff;
+	font-size: 1rem;
+	background: -webkit-linear-gradient(right, #3a93d4 0%,#5e7bce 100%);
+  background: linear-gradient(to right, #3a93d4 0%,#5e7bce 100%);
+  letter-spacing: 1em;
+  padding-left: 1em;
+}
+
+.search-btn {
+  width: 10rem;
+  height: 2.67rem;
+}
+
+.cancel-btn {
+  width: 10rem;
+  height: 2.67rem;
+  background: transparent;
+  color: #41adf3;
+  border: 1px solid #41adf3;
+}
+
+/* 表格 */
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.ui-table-title {
+	width: 100%;
+	display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  height: 2.6rem;
+  /* line-height: 2.6rem; */
+  border-bottom: 1px solid #3a4f87;
+  /* background: #223f6a; */
+  position: absolute;
+  top: 0;  /* 父元素-paddint-top:1rem */
+}
+
+.ui-table-title > span {
+  display: table-cell;
+}
+
+.ui-table-body .table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.ui-table-body .table div.tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  /* border-bottom: 1px solid #3a4f87; */
+}
+
+.ui-table-body tr {
+	height: 2.5rem;
+}
+
+.ui-table-body .table div.tr:nth-child(odd) {
+  /* background: #193968; */
+}
+
+.ui-table-body .table div.tr:nth-child(even) {
+  /* background: #16305b; */
+}
+
+.ui-table-body .table.mtable div.tr:hover {
+  background-color: #1a4785;
+  color: #fff;
+}
+
+.ui-table-body .table div.tr span.td {
+  display: table-cell;
+  padding-right: 1rem;
+}
+
+.ui-table-body .table div.tr span.td:last-child {
+  padding-right: 0;
+}
+
+.ui-table-body {
+  width: 100%;
+  overflow: auto;
+  position: absolute;
+  height: calc(100% - 3.2rem);
+  top: 3.2rem;  /* .ui-table-title 表头高度为2.5rem */
+}
+
+.ui-table-body.has-page {
+  height: calc(100% - 3.2rem - 3rem);
+}
+
+.ui-table-page {
+  position: absolute;
+  height: 3rem;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8bbcdb;
+}
+
+.ui-table-page .table-pagi-prev > span,
+.ui-table-page .table-pagi-next > span {
+  padding: 0 .48rem;
+}
+
+.ui-table-page .page-first,
+.ui-table-page .page-next,
+.ui-table-page .page-prev {
+  cursor: pointer;
+}
+
+.ui-table-page .table-pagi {
+  margin: 0 1rem;
+}
+
+.ui-table-page .details {
+  color: #07b8f9;
+  cursor: pointer;
+}
+
+
+.ui-table-page .ui-select {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.ui-table-page .ui-select,
+.ui-table-page .ui-select-button {
+  height: 1.8rem;
+  line-height: 1.8rem;
+}
+
+/* 表格结束 */
+
+.checkbox-btn {
+	width: 8rem;
+	height: 2.4rem;
+	line-height: 2.4rem;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #195f8d;
+	cursor: pointer;
+	margin-right: 1.5rem;
+}
+
+.checkbox-btn.active {
+	border-color: #0da7ea;
+	color: #239fef;
+}
+
+/* 弹框 */
+.dialog-content {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 35, 57, 0);
+  transform: scale(0);
+  opacity: 0;
+  transition: all .68s;
+  /* border-radius: 100%; */
+}
+
+.dialog-content.active {
+  transform: scale(1);
+  opacity: 1;
+  /* background: rgba(15, 35, 57, 0.82); */
+  background: #1b3358;
+  /* border-radius: 0; */
+}
+
+
+/* 地图 */
+.map {
+	width: 100%;
+	height: 100%;
+  background: #053445;
+  background: url(../imgs/map.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+/* 时间插件配色修改 */
+#jedate {
+  color: #333;
+}
+
+.dateicon::before {
+  display: inline-block;
+  content: "";
+  width: 1.068rem;
+  height: 1.068rem;
+  position: absolute;
+  background: url(../lulu/images/date.png) no-repeat center;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtUlEQVQ4je3SPYrCMRQE8J8fIFhYWVjrCewsrL2Ad1jQ2lZrT6DiyVJtq4WVhSCsaGECIQjyly0dmGLmPSYvyauFEBT4wxz7wv/BBs3cbGKBbuY1MEW/CBjG2jrzTrUQwh0nnKPZL3RCJx70m+t6FCsMIm9YZjpxGWtJr9IVSrzyYBf5snkc06tgDOkNLrhWDGihnSZYYFsxYIZN/W3bG3wD/iEgfePEc7erYMRzkQ7ofTjA8QGfkSUblrSNUQAAAABJRU5ErkJggg==), none;
+  background-size: 100%;
+  left: 7px;
+  top: .78rem;
+}
+
+
+
+
+@media (min-width: 900px) and (max-width: 1441px) {
+  html, body {
+    font-size: 12px;
+    /* color: red; */
+  }
+}
+
+
+/*滚动条样式*/
+::-webkit-scrollbar {/*滚动条整体样式*/
+  width: .4rem;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: .4rem;
+}
+::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+  border-radius: .2rem;
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0);
+  background: #07b8f9;
+}
+::-webkit-scrollbar-track {/*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0);
+  border-radius: 0;
+  background: rgba(33, 58, 102, 0);
+}
+
+
+@media (min-width: 900px) and (max-width: 1400px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1840px) {
+  html, body {
+    font-size: 14px;
+    /* color: green; */
+  }
+}
+
+@media (min-width: 1840px) and (max-width: 2360px) {
+  html, body {
+    font-size: 16px;
+    /* color: blue; */
+  }
+}

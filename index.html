@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>义乌交酒驾系统</title>
+	<link rel="stylesheet" href="style/main.css" />
+	<style>
+		.btns-box {
+			height: 5rem;
+			padding-left: 2rem;
+			border-bottom: 1px solid #0d254e;
+		}
+
+		.btns-box .btn-item {
+			display: inline-block;
+			padding: 0 1rem;
+			line-height: 4rem;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.btns-box .btn-item.active {
+			border-bottom: 2px solid #239fef;
+		}
+
+		.main {
+			width: 100%;
+			height: calc(100% - 5rem);
+			display: flex;
+		}
+
+		.btns-box .btn-item ul {
+			position: absolute;
+			background: #0d254e;
+			padding: 1rem 0;
+			display: none;
+		}
+
+		.btns-box .btn-item ul li {
+			white-space: nowrap;
+			line-height: 2.4rem;
+			padding: .2rem 1rem
+		}
+
+		.btns-box .btn-item ul li.active,
+		.btns-box .btn-item ul li:hover {
+			background: #3a61a3
+		}
+	</style>
+</head>
+
+<body>
+	<!-- 菜单 -->
+	<div class="btns-box">
+		<div class="btn-item active" data-url="demo">综合画像</div>
+		<div class="btn-item" data-url="drunkDriving">人员画像</div>
+		<div class="btn-item" data-url="drunkDriving">车辆画像</div>
+		<div class="btn-item" data-url="drunkDriving">环境画像</div>
+		<div class="btn-item" data-url="drunkDriving">高危预警</div>
+		<div class="btn-item" data-url="policeSentimentList">
+			<span>Demo</span>
+			<ul class="child">
+				<li data-url="demo">表格</li>
+				<li data-url="drunkDriving">echarts</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main">
+		<iframe id="iframe-page" scrolling="no" class="iframe-page" width="100%" height="100%" frameborder="0" src="drunkDriving.html"></iframe>
+	</div>
+
+
+	<script src="./js/common/jquery.min.js"></script>
+	<script>
+		// 切换内容
+		$(document).ready(function() {
+			$('.btns-box').on('click', '.btn-item', function(e) {
+				var url = $(e.currentTarget).data('url')
+				$('.btn-item').removeClass('active')
+				$(this).addClass('active')
+				var _hasChild = $(this).find('ul').hasClass('child');
+				if(_hasChild) {
+					$('.btns-box .btn-item ul').hide()
+					$(this).find('ul').show()
+					return
+				}
+				$('#iframe-page').attr('src', url + '.html')
+			})
+
+			$('.btns-box').on('click', '.btn-item ul li', function(e) {
+				e.stopPropagation()
+				var url = $(e.currentTarget).data('url')
+				// $('.btn-item').removeClass('active')
+				$('.btns-box .btn-item ul li').removeClass('active')
+				$(this).addClass('active')
+				$('.btn-item ul').hide()
+				$('#iframe-page').attr('src', url + '.html')
+			})
+		})
+	</script>
+</body>
+</html>
